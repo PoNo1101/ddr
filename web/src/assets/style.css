@@ -1,11 +1,11 @@
 @font-face {
     font-family: "HYWenHei";
-    src: url("font/HYWenHei.ttf");
+    src: url("@/assets/font/HYWenHei.ttf");
 }
 
 @font-face {
     font-family: "Gloock";
-    src: url("font/Gloock-Regular.ttf");
+    src: url("@/assets/font/Gloock-Regular.ttf");
 }
 
 :root {
