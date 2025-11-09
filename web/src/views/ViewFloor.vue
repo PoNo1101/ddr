@@ -17,7 +17,7 @@ function onMouseUp() {
 <template>
   <div class="view-climb">
     <CompositeNavigation mode="light" />
-    <LayoutPageContainer>
+    <LayoutPageContainer class="view-floor-container">
       <img class="view-floor-boss-icon" :src="BossIcon" v-if="store.isBoss" />
       <div class="view-climb-roll-button">
         <img :src="Circle" alt="" />
@@ -53,8 +53,12 @@ function onMouseUp() {
   background-color: var(--c-white);
   color: var(--c-black);
   padding: 32px;
-  height: calc(100vh - 20px);
   box-sizing: border-box;
+  height: 100vh;
+}
+
+.view-floor-container {
+  height: calc(100% - 20px);
 }
 
 .view-climb-roll-button-dots > div {

@@ -10,7 +10,7 @@ defineProps<{
     <span>✦</span>
     <RouterLink to="/rules">Rules</RouterLink>
     <span>✦</span>
-    <RouterLink to="/climb">Climb</RouterLink>
+    <RouterLink to="/floor">Climb</RouterLink>
   </nav>
 </template>
 
