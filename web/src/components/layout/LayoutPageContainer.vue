@@ -11,7 +11,6 @@
   margin-left: auto;
   margin-right: auto;
   padding: 32px;
-  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
