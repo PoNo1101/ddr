@@ -1,9 +1,6 @@
-name: learn-github-actions
+name: BUILD & DEPLOY STAGING
 run-name: STAGING
-on:
-  push:
-    branches:
-      - main
+on: [push]
 
 jobs:
   build:
@@ -13,6 +10,7 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 22
+      - run: cd web # will need to be removed later on
       - run: npm ci
       - run: npm run build
       - uses: actions/upload-artifact@v4
