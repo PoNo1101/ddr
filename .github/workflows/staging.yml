@@ -4,6 +4,8 @@ on: [push]
 
 jobs:
   build:
+    env:
+      VITE_APP_VERSION: staging
     defaults:
       run:
         working-directory: ./web
