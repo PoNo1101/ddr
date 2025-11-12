@@ -1,9 +1,9 @@
 <script setup lang="ts">
 import CommonTrialCard from '@/components/common/CommonTrialCard.vue'
-import { useTemporaryGameStore } from '@/stores/temporary_game_store'
+import { useGameStore } from '@/stores/temporary_game_store'
 import { onMounted } from 'vue'
 
-const store = useTemporaryGameStore()
+const store = useGameStore()
 onMounted(() => {
   store.roll()
 })
@@ -11,7 +11,7 @@ onMounted(() => {
 
 <template>
   <div class="view-roll">
-    <div class="view-climb-cards" v-if="store.getDraft">
+    <div class="view-roll-cards" v-if="store.getDraft">
       <CommonTrialCard :content="store.getDraft[0]!" />
       <CommonTrialCard :content="store.getDraft[1]!" />
       <CommonTrialCard :content="store.getDraft[2]!" />
@@ -28,7 +28,7 @@ onMounted(() => {
   height: 100vh;
 }
 
-.view-climb-cards {
+.view-roll-cards {
   opacity: 0;
   animation: up 1000ms cubic-bezier(0.19, 1, 0.22, 1) 600ms;
   animation-fill-mode: forwards;
@@ -45,7 +45,7 @@ onMounted(() => {
   }
 }
 
-.view-climb-cards {
+.view-roll-cards {
   display: flex;
   gap: 16px;
 }
